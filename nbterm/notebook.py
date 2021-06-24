@@ -127,7 +127,7 @@ class Notebook(Help, Format, KeyBindings):
             layout=self.layout, key_bindings=self.key_bindings, full_screen=True
         )
         self.focus(0)
-        asyncio.run(self._show())
+        asyncio.get_event_loop().run_until_complete(self._show())
 
     def update_layout(self):
         if self.app:
@@ -391,7 +391,7 @@ class Notebook(Help, Format, KeyBindings):
 
     async def _show(self):
         if self.kd:
-            asyncio.create_task(self.kd.start())
+            asyncio.get_event_loop().create_task(self.kd.start())
         await self.app.run_async()
 
     async def exit(self):
