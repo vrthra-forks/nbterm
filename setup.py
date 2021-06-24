@@ -22,7 +22,7 @@ setup(
         "typer",
         "pygments",
         "rich",
-        "kernel_driver>=0.0.6",
+        "kernel_driver>=0.0.1",
     ],
     extras_require={
         "test": [
