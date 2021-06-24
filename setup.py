@@ -24,6 +24,9 @@ setup(
         "rich",
         "kernel_driver>=0.0.6",
     ],
+    dependency_links=[
+        'git+ssh://git@github.com/vrthra-forks/kernel_driver.git#egg=kernel_driver-0.0.6'
+    ],
     extras_require={
         "test": [
             "mypy",
