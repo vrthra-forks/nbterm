@@ -22,10 +22,7 @@ setup(
         "typer",
         "pygments",
         "rich",
-        "kernel_driver==0.0.6",
-    ],
-    dependency_links=[
-        'git+ssh://git@github.com/vrthra-forks/kernel_driver/tarball/master#egg=kernel_driver-0.0.6'
+        "kernel_driver @ git+ssh://git@github.com/vrthra-forks/kernel_driver.git"
     ],
     extras_require={
         "test": [
