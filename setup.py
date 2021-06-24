@@ -16,7 +16,7 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     packages=["nbterm"],
-    python_requires=">=3.7",
+    python_requires=">=3.6",
     install_requires=[
         "prompt-toolkit>=3.0.16",
         "typer",
