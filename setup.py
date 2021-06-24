@@ -22,7 +22,7 @@ setup(
         "typer",
         "pygments",
         "rich",
-        "kernel_driver>=0.0.6",
+        "kernel_driver",
     ],
     dependency_links=[
         'git+ssh://git@github.com/vrthra-forks/kernel_driver.git#egg=kernel_driver-0.0.6'
