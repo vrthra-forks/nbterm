@@ -176,6 +176,9 @@ class Cell:
         elif self.json["cell_type"] == "code":
             code = Syntax(self.input_buffer.text, self.notebook.language)
             text = rich_print(code)[:-1]  # remove trailing "\n"
+        else:
+            assert self.json["cell_type"] == 'raw'
+            text = self.input_buffer.text
         line_nb = text.count("\n") + 1
         self.input_window.content = FormattedTextControl(text=ANSI(text))
         height_keep = self.input_window.height
