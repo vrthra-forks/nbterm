@@ -70,7 +70,7 @@ def main(
     )
     if run:
         assert no_kernel is not True
-        asyncio.run(nb.run_all())
+        asyncio.get_event_loop().run_until_complete(nb.run_all())
         if save_path is None:
             directory = notebook_path.parent
             prefix = str(directory / f"{notebook_path.stem}_run")
